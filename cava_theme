@@ -1,0 +1,10 @@
+[color]
+# Steel-blue night rising to ice white; only the loudest peaks hit threat red.
+gradient = 1
+gradient_count = 6
+gradient_color_1 = '#2b3d4c'
+gradient_color_2 = '#626d78'
+gradient_color_3 = '#95a0a9'
+gradient_color_4 = '#c8d3da'
+gradient_color_5 = '#e5ecf1'
+gradient_color_6 = '#e24945'

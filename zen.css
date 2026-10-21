@@ -1,0 +1,63 @@
+/* The Machine palette for Zen's browser chrome. */
+:root {
+    --thpm-bg: #131e28;
+    --thpm-surface: #1e2a35;
+    --thpm-raised: #2b3d4c;
+    --thpm-fg: #c8d3da;
+    --thpm-bright: #eaeff3;
+    --thpm-muted: #626d78;
+    --thpm-accent: #ccdae3;
+    --thpm-teal: #92bbea;
+
+    --zen-colors-primary: var(--thpm-bg) !important;
+    --zen-colors-secondary: var(--thpm-surface) !important;
+    --zen-colors-tertiary: var(--thpm-raised) !important;
+    --zen-colors-border: var(--thpm-muted) !important;
+    --zen-main-browser-background: var(--thpm-bg) !important;
+    --lwt-accent-color: var(--thpm-bg) !important;
+    --lwt-text-color: var(--thpm-fg) !important;
+    --lwt-sidebar-background-color: var(--thpm-bg) !important;
+    --lwt-sidebar-text-color: var(--thpm-fg) !important;
+    --toolbar-bgcolor: var(--thpm-bg) !important;
+    --toolbar-color: var(--thpm-fg) !important;
+    --toolbar-field-background-color: var(--thpm-surface) !important;
+    --toolbar-field-color: var(--thpm-bright) !important;
+    --arrowpanel-background: var(--thpm-surface) !important;
+    --arrowpanel-color: var(--thpm-fg) !important;
+    --in-content-page-background: var(--thpm-bg) !important;
+    --focus-outline-color: var(--thpm-accent) !important;
+}
+
+#main-window,
+#navigator-toolbox,
+#titlebar,
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar,
+#zen-sidebar-top-buttons,
+#zen-sidebar-foot-buttons,
+#zen-appcontent-wrapper {
+    background-color: var(--thpm-bg) !important;
+    color: var(--thpm-fg) !important;
+    border-color: var(--thpm-muted) !important;
+}
+
+#urlbar-background,
+#searchbar {
+    background-color: var(--thpm-surface) !important;
+    color: var(--thpm-bright) !important;
+    border: 1px solid var(--thpm-muted) !important;
+}
+
+#urlbar[focused="true"] #urlbar-background,
+#searchbar:focus-within {
+    border-color: var(--thpm-accent) !important;
+}
+
+#zen-sidebar-top-buttons toolbarbutton,
+#zen-sidebar-foot-buttons toolbarbutton,
+#nav-bar toolbarbutton,
+#TabsToolbar toolbarbutton {
+    color: var(--thpm-fg) !important;
+    fill: var(--thpm-teal) !important;
+}

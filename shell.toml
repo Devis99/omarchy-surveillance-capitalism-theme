@@ -1,0 +1,155 @@
+# Surveillance Capitalism shell: the AI's view. Steel-blue night, ice-white box,
+# red only when something is a threat.
+
+[bar]
+background = "#131e28"
+background-alpha = 0.90
+text = "#c8d3da"
+active = "#ccdae3"
+scale-with-font = true
+size-horizontal = 28
+size-vertical = 30
+
+[hyprland]
+active-border = "rgb(ccdae3)"
+active-border-foreground = "#ccdae3"
+
+[controls]
+normal-color = "#95a0a9"
+normal-fill-alpha = 0.02
+normal-border = "#626d78"
+normal-border-width = 1
+normal-border-alpha = 0.45
+
+# Hover and focus draw the AI's ice-white box around a control.
+hover-cursor-color = "accent"
+hover-cursor-fill-alpha = 0.04
+hover-cursor-border = "#ccdae3"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 1.0
+
+focus-color = "#eaeff3"
+focus-fill-alpha = 0.10
+focus-border = "#ccdae3"
+focus-border-width = 1
+focus-border-alpha = 1.0
+
+selected-color = "#eaeff3"
+selected-fill-alpha = 0.08
+selected-border = "#ccdae3"
+selected-border-width = 1
+selected-border-alpha = 1.0
+
+pressed-color = "#ccdae3"
+pressed-fill-alpha = 0.20
+selection-color = "#ccdae3"
+selection-fill-alpha = 0.32
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+xs = 2
+md = 4
+control-padding-x = 8
+control-padding-y = 4
+panel-padding = 12
+
+[font]
+base-size = 12
+heading = 16
+icon-large = 18
+
+[popups]
+background = "#131e28"
+background-alpha = 0.96
+text = "#c8d3da"
+border = "hyprland.active-border"
+border-alpha = 1.0
+border-width = 1
+
+[tooltip]
+background = "#0b151d"
+background-alpha = 0.98
+text = "#c8d3da"
+border = "#626d78"
+border-alpha = 1.0
+border-width = 1
+
+[notifications]
+background = "#131e28"
+background-alpha = 0.97
+text = "#c8d3da"
+border = "hyprland.active-border"
+border-alpha = 1.0
+border-width = 1
+countdown = "#e24945"  # the recording light
+
+[launcher]
+background = "#0b151d"
+background-alpha = 0.96
+text = "#c8d3da"
+border = "#626d78"
+border-alpha = 1.0
+border-width = 1
+scrim = "#050c13"
+scrim-alpha = 0.60
+selected-background = "#131e28"
+selected-background-alpha = 0.0
+selected-text = "#eaeff3"
+selected-border = "#ccdae3"
+selected-border-alpha = 1.0
+selected-border-width = 1
+
+[menu]
+# Opaque console card with a quiet steel frame. The selected row is the AI's
+# classification box: a full ice-white frame, no fill.
+background = "#050c13"
+background-alpha = 0.97
+text = "#c8d3da"
+border = "#626d78"
+border-alpha = 1.0
+border-width = 1
+scrim = "#050c13"
+scrim-alpha = 0.70
+selected-background = "#131e28"
+selected-background-alpha = 0.0
+selected-text = "#eaeff3"
+selected-border = "#ccdae3"
+selected-border-alpha = 1.0
+selected-border-width = 1
+
+[polkit]
+background = "#131e28"
+background-alpha = 0.98
+text = "#c8d3da"
+text-error = "#e24945"
+border = "hyprland.active-border"
+border-error = "#e24945"
+border-alpha = 1.0
+border-width = 1
+scrim = "#0b151d"
+scrim-alpha = 0.62
+accent = "#ccdae3"
+
+[lock]
+background = "#131e28"
+background-alpha = 0.90
+text = "#c8d3da"
+placeholder = "#95a0a9"
+text-error = "#e24945"
+border = "#626d78"
+border-active = "hyprland.active-border"
+border-error = "#e24945"
+border-alpha = 1.0
+border-width = 1
+selection = "#ccdae3"
+selection-alpha = 0.36
+
+[image-picker]
+scrim = "#0b151d"
+scrim-alpha = 0.62
+text = "#c8d3da"
+selected-border = "#ccdae3"
+selected-border-alpha = 1.0
+unselected-border = "#626d78"
+unselected-border-alpha = 0.75

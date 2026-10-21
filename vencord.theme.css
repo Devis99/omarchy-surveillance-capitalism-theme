@@ -1,0 +1,401 @@
+/**
+ * @name Surveillance Capitalism
+ * @description The Machine meets behavioral surplus, prediction, and instrumentarian control.
+ * @author Devis99
+ * @version 0.1.0
+ * @source https://refact0r.github.io/midnight-discord/
+ */
+
+@import url("https://refact0r.github.io/midnight-discord/build/midnight.css");
+
+:root {
+    color-scheme: dark;
+
+    /* Reference palette: steel-blue night, ice-white box, and the machine's four words. */
+    --machine-void: #050c13;
+    --machine-black: #131e28;
+    --machine-panel: #1e2a35;
+    --machine-panel-raised: #2b3d4c;
+    --machine-line: #626d78;
+    --machine-steel: #95a0a9;
+    --machine-paper: #c8d3da;
+    --machine-white: #eaeff3;
+    --machine-signal: #ccdae3;
+    --machine-signal-bright: #e5ecf1;
+    --machine-red: #e24945;
+
+    /* Surveillance-capitalism layer: experience becomes surplus; surplus becomes prediction. */
+    --surveillance-human: var(--machine-paper);
+    --surveillance-instrument: var(--machine-steel);
+    --surveillance-surplus: rgba(204, 218, 227, 0.12);
+
+    /* Midnight layout */
+    --font: "JetBrainsMono Nerd Font";
+    --code-font: "JetBrainsMono Nerd Font";
+    font-weight: 400;
+    --gap: 8px;
+    --divider-thickness: 1px;
+    --border-thickness: 1px;
+    --animations: off;
+    --list-item-transition: 0.12s ease;
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+    --custom-window-controls: off;
+    --custom-dms-icon: off;
+    --custom-dms-background: off;
+    --background-image: off;
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --unrounding: on;
+    --small-user-panel: on;
+    --panel-labels: on;
+    --label-color: var(--machine-steel);
+
+    /* Midnight color system */
+    --colors: on;
+    --text-0: var(--machine-black);
+    --text-1: var(--machine-white);
+    --text-2: var(--surveillance-human);
+    --text-3: var(--surveillance-human);
+    --text-4: var(--surveillance-instrument);
+    --text-5: #626d78;
+    --bg-1: var(--machine-panel-raised);
+    --bg-2: var(--machine-panel);
+    --bg-3: #1e2a35;
+    --bg-4: var(--machine-black);
+    --hover: rgba(234, 239, 243, 0.055);
+    --active: var(--surveillance-surplus);
+    --active-2: rgba(204, 218, 227, 0.22);
+    --message-hover: rgba(234, 239, 243, 0.035);
+    --accent-1: var(--machine-white);
+    --accent-2: var(--machine-signal);
+    --accent-3: var(--machine-signal);
+    --accent-4: var(--machine-signal-bright);
+    --accent-5: #5492ec;
+    --accent-new: var(--machine-red);
+    --mention: rgba(216, 199, 64, 0.12);
+    --mention-hover: rgba(216, 199, 64, 0.18);
+    --online: #d2e0ea;
+    --dnd: var(--machine-red);
+    --idle: #d8c740;
+    --streaming: #95a0a9;
+    --offline: var(--machine-steel);
+    --border-light: rgba(200, 211, 218, 0.12);
+    --border: rgba(204, 218, 227, 0.28);
+    --border-hover: rgba(204, 218, 227, 0.60);
+    --button-border: rgba(200, 211, 218, 0.16);
+    --red-1: #ff7269;
+    --red-2: var(--machine-red);
+    --red-3: #ad2426;
+    --red-4: #682320;
+    --red-5: #441412;
+    --green-1: #d2e0ea;
+    --green-2: #b2c0c9;
+    --green-3: #b2c0c9;
+    --green-4: #363e44;
+    --green-5: #21272b;
+    --blue-1: #7eb3ff;
+    --blue-2: #5492ec;
+    --blue-3: #2d70ce;
+    --blue-4: #213d66;
+    --blue-5: #132643;
+    --yellow-1: var(--machine-signal-bright);
+    --yellow-2: #d8c740;
+    --yellow-3: #bb9200;
+    --yellow-4: #463d00;
+    --yellow-5: #2d2700;
+    --purple-1: #ca5552;
+    --purple-2: #a83636;
+    --purple-3: #a7001b;
+    --purple-4: #642625;
+    --purple-5: #421716;
+
+    /* Discord semantic surfaces */
+    --background-primary: var(--machine-black);
+    --background-secondary: #1e2a35;
+    --background-secondary-alt: var(--machine-panel);
+    --background-tertiary: var(--machine-void);
+    --background-accent: var(--machine-line);
+    --background-floating: var(--machine-panel-raised);
+    --background-base-low: var(--machine-black);
+    --background-base-lower: var(--machine-void);
+    --background-base-lowest: var(--machine-void);
+    --background-surface-high: var(--machine-panel);
+    --background-surface-higher: var(--machine-panel-raised);
+    --background-surface-highest: #2b3d4c;
+    --bg-base-primary: var(--machine-black);
+    --bg-base-secondary: #1e2a35;
+    --bg-base-tertiary: var(--machine-panel);
+    --bg-surface-overlay: var(--machine-panel-raised);
+    --bg-surface-raised: var(--machine-panel-raised);
+    --chat-background-default: var(--machine-black);
+    --home-background: var(--machine-void);
+    --channeltextarea-background: var(--machine-panel);
+    --modal-background: var(--machine-panel-raised);
+    --modal-footer-background: var(--machine-panel);
+    --background-mentioned: var(--mention);
+    --background-mentioned-hover: var(--mention-hover);
+    --background-message-hover: var(--message-hover);
+    --background-message-highlight: rgba(204, 218, 227, 0.08);
+    --background-modifier-hover: var(--hover);
+    --background-modifier-active: var(--active);
+    --background-modifier-selected: var(--active-2);
+    --background-modifier-accent: rgba(204, 218, 227, 0.16);
+    --text-normal: var(--machine-paper);
+    --text-muted: var(--machine-steel);
+    --text-primary: var(--machine-white);
+    --text-secondary: var(--machine-paper);
+    --text-tertiary: var(--machine-steel);
+    --text-link: var(--machine-signal-bright);
+    --text-brand: var(--machine-signal);
+    --header-primary: var(--machine-white);
+    --header-secondary: var(--machine-paper);
+    --interactive-normal: var(--machine-paper);
+    --interactive-hover: var(--machine-white);
+    --interactive-active: var(--machine-signal-bright);
+    --interactive-muted: var(--machine-steel);
+    --channels-default: var(--machine-steel);
+    --channel-icon: var(--machine-paper);
+    --brand-500: var(--machine-signal);
+    --brand-560: var(--machine-white);
+    --brand-600: #bb9200;
+    --control-brand-foreground: var(--machine-signal);
+    --control-brand-foreground-new: var(--machine-signal);
+    --button-filled-brand-background: var(--machine-signal);
+    --button-filled-brand-background-hover: var(--machine-signal-bright);
+    --button-filled-brand-text: var(--machine-black);
+    --button-positive-background: #2d70ce;
+    --button-danger-background: var(--machine-red);
+    --info-warning-foreground: var(--machine-signal);
+    --status-positive: #d2e0ea;
+    --status-warning: var(--machine-signal);
+    --status-danger: var(--machine-red);
+    --status-success: #d2e0ea;
+    --border-subtle: rgba(200, 211, 218, 0.14);
+    --input-background: var(--machine-panel);
+    --input-border: var(--machine-line);
+    --scrollbar-thin-thumb: rgba(204, 218, 227, 0.35);
+    --scrollbar-auto-thumb: rgba(204, 218, 227, 0.35);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-track: transparent;
+
+    /* Square monitor geometry */
+    --radius-xs: 0px;
+    --radius-sm: 0px;
+    --radius-md: 0px;
+    --radius-lg: 0px;
+    --radius-xl: 0px;
+    --radius-xxl: 0px;
+}
+
+/* Remove Discord's soft purple leftovers. */
+body,
+[class*="appMount"],
+[class*="bg_"],
+[class*="base_"] {
+    background-color: var(--machine-black) !important;
+}
+
+:is(
+    .guilds_c48ade,
+    .wrapper_ef3116,
+    .sidebar_c48ade,
+    .container__2637a,
+    .panels_c48ade,
+    .chat_f75fb0,
+    .chatContent_f75fb0,
+    .membersWrap_c8ffbb,
+    .members_c8ffbb
+) {
+    background-color: var(--machine-black) !important;
+    background-image: none !important;
+    border-color: rgba(204, 218, 227, 0.18) !important;
+}
+
+/* Ice state rail: selected and unread channels. */
+:is(a[data-list-item-id^="channels___"], [class*="containerDefault"], [class*="voiceChannelButton"]) {
+    border-left: 2px solid transparent !important;
+    border-radius: 0 !important;
+}
+
+:is(a[data-list-item-id^="channels___"], [class*="containerDefault"], [class*="voiceChannelButton"]):hover {
+    background: rgba(204, 218, 227, 0.07) !important;
+    border-left-color: rgba(204, 218, 227, 0.45) !important;
+}
+
+:is([class*="modeSelected"], [class*="modeConnected"], [aria-selected="true"]) {
+    border-left-color: var(--machine-signal) !important;
+}
+
+:is([class*="modeSelected"], [class*="modeConnected"]) :is([class*="name"], [class*="icon"]),
+:is([class*="modeSelected"], [class*="modeConnected"]) svg {
+    color: var(--machine-signal-bright) !important;
+    fill: var(--machine-signal-bright) !important;
+}
+
+:is([class*="unreadBar"], [class*="unreadPill"], [class*="numberBadge"], [class*="textBadge"]) {
+    background: var(--machine-signal) !important;
+    color: var(--machine-black) !important;
+    border-radius: 0 !important;
+}
+
+/* Thin ice telemetry line below channel header and composer. */
+:is([class*="container__9293f"], [class*="themed__9293f"]) {
+    border-bottom: 1px solid rgba(204, 218, 227, 0.42) !important;
+    background: rgba(19, 30, 40, 0.92) !important;
+}
+
+:is([class*="form_"], [class*="channelTextArea"], [class*="scrollableContainer"]) {
+    background: var(--machine-panel) !important;
+    border-radius: 0 !important;
+}
+
+:is([class*="scrollableContainer"], [class*="searchBar"], input, textarea):focus-within,
+:is(input, textarea):focus {
+    border-color: var(--machine-signal) !important;
+    box-shadow: inset 0 -2px 0 var(--machine-signal) !important;
+}
+
+/* Messages stay quiet; mentions of you are admin yellow, links are ice. */
+[class*="message"]:hover {
+    background: var(--message-hover) !important;
+}
+
+[class*="mentioned"] {
+    background: var(--mention) !important;
+    box-shadow: inset 2px 0 0 #d8c740 !important;
+}
+
+:is([class*="messageContent"], [class*="markup"]) a {
+    color: var(--machine-signal-bright) !important;
+}
+
+:is([class*="messageContent"], [class*="markup"]) [class*="mention"] {
+    color: #f2e15e !important;
+    background: rgba(216, 199, 64, 0.10) !important;
+    border: 1px solid rgba(216, 199, 64, 0.30) !important;
+    border-radius: 0 !important;
+}
+
+/* Data exhaust stays legible, but subordinate to human-facing text. */
+:is([class*="timestamp"], [class*="edited"], [class*="botTag"]) {
+    color: var(--machine-signal) !important;
+    opacity: 0.78;
+    letter-spacing: 0.02em;
+}
+
+/* System-looking code and cards. */
+:is(code, pre, [class*="codeContainer"], [class*="embedFull"], [class*="cardPrimary"], [class*="card_"]) {
+    background: var(--machine-panel-raised) !important;
+    border: 1px solid rgba(200, 211, 218, 0.14) !important;
+    border-left: 2px solid var(--machine-signal) !important;
+    border-radius: 0 !important;
+}
+
+:is([class*="embedFull"], [class*="cardPrimary"], [class*="card_"]) {
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Buttons read like machine controls, not candy. Hover must not replace state color. */
+:is(button, [role="button"]):not([class*="lookLink"]):not([class*="lookFilled"]):not([class*="colorBrand"]):hover {
+    background: var(--machine-black) !important;
+    background-image: none !important;
+    border-color: var(--machine-signal) !important;
+    color: var(--machine-paper) !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+:is(button, [role="button"]):not([class*="lookLink"]):not([class*="lookFilled"]):not([class*="colorBrand"]):hover :is(svg, [class*="icon"]) {
+    color: var(--machine-paper) !important;
+    fill: currentColor !important;
+    opacity: 1 !important;
+}
+
+/* Header actions read like signal instrument controls. */
+:is([class*="toolbar"], [class*="chatHeader"]) :is(button, [role="button"]) {
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    color: var(--machine-paper) !important;
+}
+
+:is([class*="toolbar"], [class*="chatHeader"]) :is(button, [role="button"]):hover {
+    background: rgba(204, 218, 227, 0.10) !important;
+    border-color: var(--machine-signal) !important;
+    color: var(--machine-paper) !important;
+}
+
+:is([class*="toolbar"], [class*="chatHeader"]) :is(button, [role="button"]):hover svg {
+    color: currentColor !important;
+    fill: currentColor !important;
+}
+
+:is([class*="lookFilled"], [class*="button"])[class*="colorBrand"] {
+    background: var(--machine-signal) !important;
+    color: var(--machine-black) !important;
+    border: 1px solid var(--machine-signal-bright) !important;
+    border-radius: 0 !important;
+}
+
+:is([class*="lookFilled"], [class*="button"])[class*="colorBrand"]:hover {
+    background: var(--machine-signal) !important;
+    color: var(--machine-black) !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Observation registry divider and quiet group labels. */
+:is([class*="membersWrap"], [class*="members_"]) {
+    border-left: 1px solid rgba(204, 218, 227, 0.28) !important;
+}
+
+[class*="membersGroup"] {
+    color: var(--machine-steel) !important;
+    letter-spacing: 0.04em;
+}
+
+/* Popouts, menus, and modals use console edges instead of soft cards. */
+:is([class*="popout_"], [class*="menu_"], [class*="modal_"], [role="dialog"]) {
+    border: 1px solid rgba(204, 218, 227, 0.30) !important;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Square monitor geometry across controls, cards, and avatars. */
+:is(button, [role="button"], [class*="menu"], [class*="popout"], [class*="modal"], [class*="itemCard"], [class*="folderIconWrapper"]) {
+    border-radius: 0 !important;
+}
+
+[class*="sidebar"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--machine-signal);
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+/* Analog-channel focus rings; no glow everywhere. */
+:is(button, [role="button"], a, input, textarea):focus-visible {
+    outline: 1px solid var(--machine-signal) !important;
+    outline-offset: 1px;
+    box-shadow: 0 0 0 3px rgba(204, 218, 227, 0.12) !important;
+}
+
+*,
+*::before,
+*::after {
+    border-radius: 0 !important;
+}
+
+* {
+    scrollbar-color: rgba(204, 218, 227, 0.35) transparent;
+    text-rendering: optimizeLegibility;
+}

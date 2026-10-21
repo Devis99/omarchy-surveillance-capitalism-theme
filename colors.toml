@@ -1,0 +1,69 @@
+# Surveillance Capitalism — the view from inside the system.
+# Ground and type measured from the Person of Interest title card (steel-blue night city,
+# ice-white lettering); signal colours are the AI's classification boxes.
+base00 = "#131e28"
+base01 = "#1e2a35"
+base02 = "#2b3d4c"
+base03 = "#626d78"
+base04 = "#95a0a9"
+base05 = "#c8d3da"
+base06 = "#e5ecf1"
+base07 = "#eaeff3"
+base08 = "#e24945"
+base09 = "#c39800"
+base0A = "#d8c740"
+base0B = "#b2c0c9"
+base0C = "#92bbea"
+base0D = "#5492ec"
+base0E = "#a83636"
+base0F = "#7d6627"
+base10 = "#0b151d"
+base11 = "#050c13"
+base12 = "#ff7269"
+base13 = "#f2e15e"
+base14 = "#d2e0ea"
+base15 = "#bcdbff"
+base16 = "#7eb3ff"
+base17 = "#ca5552"
+
+mode = "dark"
+
+# The AI's box is ice white: every window it frames is just another subject.
+accent = "#ccdae3"
+selection = "#2b3d4c"
+muted = "#626d78"
+
+background = "#131e28"
+dark_background = "#0b151d"
+darker_background = "#050c13"
+lighter_background = "#1e2a35"
+
+foreground = "#c8d3da"
+dark_foreground = "#95a0a9"
+light_foreground = "#e5ecf1"
+bright_foreground = "#eaeff3"
+
+hyprland_active_border = "rgb(ccdae3)"
+hyprland_inactive_border = "rgba(626d7855)"
+active_border_color = "#ccdae3"
+active_tab_background = "#2b3d4c"
+
+# Four words only. The terminal speaks the AI's classifications and nothing else:
+# red threat, yellow admin, blue government, white irrelevant. Every other slot
+# is a shade of one of those four: green (success) is irrelevant white, cyan is
+# pale government blue, magenta is dark threat red, orange is deep admin yellow.
+red = "#e24945"
+yellow = "#d8c740"
+orange = "#c39800"
+green = "#b2c0c9"
+cyan = "#92bbea"
+blue = "#5492ec"
+magenta = "#a83636"
+brown = "#7d6627"
+
+bright_red = "#ff7269"
+bright_yellow = "#f2e15e"
+bright_green = "#d2e0ea"
+bright_cyan = "#bcdbff"
+bright_blue = "#7eb3ff"
+bright_magenta = "#ca5552"
