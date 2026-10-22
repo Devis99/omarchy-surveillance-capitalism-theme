@@ -1,0 +1,9 @@
+# cliamp theme - Surveillance Capitalism
+# Installed by THPM to ~/.config/cliamp/themes/omarchy.toml
+# thpm:cliamp-use-native
+accent = "#ccdae3"     # the machine's box: primary interactive
+bright_fg = "#e5ecf1"  # ice white: primary text and time
+fg = "#95a0a9"         # steel: dim text and inactive elements
+green = "#c8d3da"     # irrelevant white: playing indicator, spectrum lows
+yellow = "#d8c740"    # admin yellow: spectrum mids, warnings
+red = "#e24945"       # threat red: spectrum highs, errors

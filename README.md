@@ -15,7 +15,7 @@ omarchy theme install https://github.com/Devis99/omarchy-surveillance-capitalism
 ## What's Included
 
 - Core Omarchy colours, an ice-white window border, and a menu and launcher whose selected row is drawn as the machine's box.
-- App themes for Discord (Vencord), GTK, Zen, Zed, btop and cava, plus Yaru-blue icons.
+- App themes for Discord (Vencord), GTK, Zen, Zed, btop, cava and cliamp, plus Yaru-blue icons.
 - A 12-wallpaper set in `backgrounds/`, all drawn for this theme.
 - The palette as a Base24 scheme in `surveillance-capitalism-base24.yaml`.
 

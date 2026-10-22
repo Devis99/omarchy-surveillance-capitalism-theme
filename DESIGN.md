@@ -91,7 +91,7 @@ photograph. See `backgrounds/SOURCES.md`.
 `gtk.css`, `zen.css`, `zed.json`, `cava_theme` and `vencord.theme.css` carry the same
 roles: ice white for focus and accent, red for errors, yellow for warnings. Cava
 rises from steel blue to ice white and touches red only at its peaks. `icons.theme`
-selects Yaru blue. `btop.theme` keeps box outlines steel and saves red for hot values.
+selects Yaru blue. `btop.theme` follows cava: graphs rise from steel to ice white and turn red only at their peaks. In Zed, code reads mostly in ice and white, with deep-yellow strings and pale blue constants; bright yellow is kept for warnings.
 
 ## Guardrails
 
