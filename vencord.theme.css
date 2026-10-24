@@ -72,7 +72,7 @@
     --message-hover: rgba(234, 239, 243, 0.035);
     --accent-1: var(--machine-white);
     --accent-2: var(--machine-signal);
-    /* Midnight fills buttons with accent-3/4/5: no fill, only a faint ice tint on hover and click. */
+    /* Midnight fills buttons with accent-3/4/5: no fill and no border, only a faint ice tint on hover and click. */
     --accent-3: transparent;
     --accent-4: rgba(204, 218, 227, 0.08);
     --accent-5: rgba(204, 218, 227, 0.14);
@@ -87,7 +87,7 @@
     --border-light: rgba(200, 211, 218, 0.12);
     --border: rgba(204, 218, 227, 0.28);
     --border-hover: rgba(204, 218, 227, 0.60);
-    --button-border: rgba(200, 211, 218, 0.16);
+    --button-border: transparent;
     --red-1: #ff7269;
     --red-2: var(--machine-red);
     --red-3: #ad2426;
@@ -358,7 +358,7 @@ body,
 :is([class*="lookFilled"], [class*="button"])[class*="colorBrand"] {
     background: transparent !important;
     color: var(--machine-white) !important;
-    border: 1px solid var(--machine-signal) !important;
+    border: none !important;
     border-radius: 0 !important;
 }
 
