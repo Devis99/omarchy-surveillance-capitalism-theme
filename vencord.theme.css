@@ -72,9 +72,10 @@
     --message-hover: rgba(234, 239, 243, 0.035);
     --accent-1: var(--machine-white);
     --accent-2: var(--machine-signal);
-    --accent-3: var(--machine-signal);
-    --accent-4: var(--machine-signal-bright);
-    --accent-5: #5492ec;
+    /* Midnight fills buttons with accent-3/4/5: keep them dark panels so icons stay visible. */
+    --accent-3: var(--machine-panel-raised);
+    --accent-4: #3a4f60;
+    --accent-5: var(--machine-panel);
     --accent-new: var(--machine-red);
     --mention: rgba(216, 199, 64, 0.12);
     --mention-hover: rgba(216, 199, 64, 0.18);
@@ -164,10 +165,23 @@
     --brand-600: #bb9200;
     --control-brand-foreground: var(--machine-signal);
     --control-brand-foreground-new: var(--machine-signal);
-    --button-filled-brand-background: var(--machine-signal);
-    --button-filled-brand-background-hover: var(--machine-signal-bright);
-    --button-filled-brand-text: var(--machine-black);
-    --button-positive-background: #2d70ce;
+    --button-filled-brand-background: var(--machine-panel-raised);
+    --button-filled-brand-background-hover: #3a4f60;
+    --button-filled-brand-text: var(--machine-white);
+    --button-positive-background: var(--machine-panel-raised);
+    /* text and icons on the dark accent buttons */
+    --control-primary-icon-default: var(--machine-white);
+    --control-primary-icon-hover: var(--machine-white);
+    --control-primary-icon-active: var(--machine-white);
+    --control-primary-text-default: var(--machine-white);
+    --control-primary-text-hover: var(--machine-white);
+    --control-primary-text-active: var(--machine-white);
+    --control-connect-icon-default: var(--machine-white);
+    --control-connect-icon-hover: var(--machine-white);
+    --control-connect-icon-active: var(--machine-white);
+    --control-connect-text-default: var(--machine-white);
+    --control-connect-text-hover: var(--machine-white);
+    --control-connect-text-active: var(--machine-white);
     --button-danger-background: var(--machine-red);
     --info-warning-foreground: var(--machine-signal);
     --status-positive: #d2e0ea;
@@ -189,6 +203,13 @@
     --radius-lg: 0px;
     --radius-xl: 0px;
     --radius-xxl: 0px;
+}
+
+/* Selected text: a quiet ice tint, never dark text on a dark fill. */
+:is(div, span, code, a)::selection,
+.highlight {
+    background: rgba(204, 218, 227, 0.28) !important;
+    color: var(--machine-white) !important;
 }
 
 /* Remove Discord's soft purple leftovers. */
@@ -335,15 +356,15 @@ body,
 }
 
 :is([class*="lookFilled"], [class*="button"])[class*="colorBrand"] {
-    background: var(--machine-signal) !important;
-    color: var(--machine-black) !important;
-    border: 1px solid var(--machine-signal-bright) !important;
+    background: var(--machine-panel-raised) !important;
+    color: var(--machine-white) !important;
+    border: 1px solid var(--machine-signal) !important;
     border-radius: 0 !important;
 }
 
 :is([class*="lookFilled"], [class*="button"])[class*="colorBrand"]:hover {
-    background: var(--machine-signal) !important;
-    color: var(--machine-black) !important;
+    background: #3a4f60 !important;
+    color: var(--machine-white) !important;
     filter: none !important;
     opacity: 1 !important;
     transform: none !important;
