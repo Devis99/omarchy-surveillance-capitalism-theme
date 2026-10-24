@@ -72,10 +72,10 @@
     --message-hover: rgba(234, 239, 243, 0.035);
     --accent-1: var(--machine-white);
     --accent-2: var(--machine-signal);
-    /* Midnight fills buttons with accent-3/4/5: keep them dark panels so icons stay visible. */
-    --accent-3: var(--machine-panel-raised);
-    --accent-4: #3a4f60;
-    --accent-5: var(--machine-panel);
+    /* Midnight fills buttons with accent-3/4/5: no fill, only a faint ice tint on hover and click. */
+    --accent-3: transparent;
+    --accent-4: rgba(204, 218, 227, 0.08);
+    --accent-5: rgba(204, 218, 227, 0.14);
     --accent-new: var(--machine-red);
     --mention: rgba(216, 199, 64, 0.12);
     --mention-hover: rgba(216, 199, 64, 0.18);
@@ -165,10 +165,10 @@
     --brand-600: #bb9200;
     --control-brand-foreground: var(--machine-signal);
     --control-brand-foreground-new: var(--machine-signal);
-    --button-filled-brand-background: var(--machine-panel-raised);
-    --button-filled-brand-background-hover: #3a4f60;
+    --button-filled-brand-background: transparent;
+    --button-filled-brand-background-hover: rgba(204, 218, 227, 0.08);
     --button-filled-brand-text: var(--machine-white);
-    --button-positive-background: var(--machine-panel-raised);
+    --button-positive-background: transparent;
     /* text and icons on the dark accent buttons */
     --control-primary-icon-default: var(--machine-white);
     --control-primary-icon-hover: var(--machine-white);
@@ -356,14 +356,14 @@ body,
 }
 
 :is([class*="lookFilled"], [class*="button"])[class*="colorBrand"] {
-    background: var(--machine-panel-raised) !important;
+    background: transparent !important;
     color: var(--machine-white) !important;
     border: 1px solid var(--machine-signal) !important;
     border-radius: 0 !important;
 }
 
 :is([class*="lookFilled"], [class*="button"])[class*="colorBrand"]:hover {
-    background: #3a4f60 !important;
+    background: rgba(204, 218, 227, 0.08) !important;
     color: var(--machine-white) !important;
     filter: none !important;
     opacity: 1 !important;
